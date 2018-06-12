@@ -1,0 +1,55 @@
+<ion-header>
+<!--   <ion-navbar color="primary">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar> -->
+</ion-header>
+
+
+<ion-content padding>
+<!--   <img src="assets/imgs/DeTerminatorLogo.png" style="height: 350px; width:auto; display: block; margin: auto"> -->
+   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input #email formControlName="email" type="email" placeholder="Your email address" 
+        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" 
+      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input #password formControlName="password" type="password" placeholder="Your password" 
+        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" 
+      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <button ion-button block type="submit" margin-top="10px">
+      Login
+    </button>
+
+  </form>
+
+  <ion-row>
+    <ion-col offset-3 col-3>
+      <button ion-button block 
+    (click)="goToSignup()">
+        Signup
+      </button>
+    </ion-col>
+    <ion-col col-3>
+      <button ion-button block
+      (click)="goToResetPassword()">
+        Forgot Password
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>

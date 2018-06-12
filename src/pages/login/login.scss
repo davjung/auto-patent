@@ -1,0 +1,54 @@
+page-login {
+  form {
+    margin-bottom: 32px;
+    button {
+      margin-top: 20px;
+    }
+    width: 75%;
+    padding-left: 25%;
+  }
+
+  p {
+    font-size: 0.8em;
+    color: #d2d2d2;
+  }
+
+  ion-label {
+    margin-left: 5px;
+  }
+
+  ion-input {
+    padding: 5px;
+  }
+
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+
+  form {
+    padding-top: 15%;
+  }
+
+  img {
+    padding-top: 5%;
+  }
+
+  ion-content{
+  	background-image: url("../../assets/imgs/bg.jpg")	
+  }
+
+  .adjust-for-form{
+  	width: 75%;
+  	padding-left: 24.5%;
+  }
+
+  .my-width{
+		width:272.5px;
+	}
+  
+
+}

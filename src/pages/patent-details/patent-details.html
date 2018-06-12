@@ -1,0 +1,187 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Detailed Patent Information </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card>
+  <ion-card-content>
+  Disclaimer: Everything displayed on this site shall be regarded as general information and in no way should it be interpreted as legal advice. You should contact an attorney directly regarding your own situation. Note that an attorney-client relationship will only be established after we’ve established that there is no conflict of interest.
+  </ion-card-content>
+
+</ion-card>
+
+<div *ngIf="patent_info_display !== undefined">
+  <ion-card>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col col-6>
+           <strong> Patent Number: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info_display.patent_number}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Application Number </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.application_number}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+           <strong> Type of Patent: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info_display.patent_type}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> PCT Priority: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.pct_priority}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Filing Date of Patent: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.patent_filing}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Grant Date of Patent: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.patent_grant}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> To date, maintenance fees timely paid: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.maintenance_fees}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Does Patent Claim Any Domestic Benefit: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.domestic_benefit}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col offset-1 col-5>
+          <strong> If any domestic benefit, earliest effective filing date: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.domestic_benefit_eff_date}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Terminal Disclaimers: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.terminal_disclaimers}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col offset-1 col-5>
+          <strong> If any Terminal Disclaimers, earliest TD-based expiration date: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.terminal_disclaimers_td}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col offset-1 col-5>
+          <strong> If any Terminal Disclaimers, related patent number: </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info_display.terminal_disclaimers_pt}} <button style="color:blue;" *ngIf = "TDcheck === true" (click)="tdPagePush()"> <ion-icon name="search"> </ion-icon> </button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> How much 154 PTA is the patent entitled to (days): </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.pta_154}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> How much 156 PTE is the patent entitled to (days): </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.pte_156}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Original Expiration Date:  </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.og_expiration_date}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6>
+          <strong> Adjusted Patent Expiration Date:  </strong>
+        </ion-col>
+        <ion-col col-2>
+          {{patent_info.adjusted_patent_expiration}}
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-row>
+      <ion-col>
+        <button  ion-button block type="submit" (click)="returnHome()"> Return Home </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button full (click)="createPdf()">Create PDF</button>
+      </ion-col>
+  </ion-row>
+
+
+
+
+</div>
+
+
+</ion-content>

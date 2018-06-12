@@ -1,0 +1,49 @@
+page-home {
+
+ion-card {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+ion-item {
+	margin-left: 10%;
+}
+
+ion-label{
+    font-size: 0.8em;
+}
+
+.positionCheckBox {
+	padding-left: 20px;
+}
+
+
+.positionCalculationCard {
+	padding-top: 0.5%;
+}
+
+.text-input::-moz-placeholder {
+  color: #6A5ACD;
+  font-size: 0.9em;
+}
+
+.text-input:-ms-input-placeholder {
+  color: #6A5ACD;
+  font-size: 0.9em;
+}
+
+.text-input::-webkit-input-placeholder {
+  color: #6A5ACD;
+  font-size: 0.9em;
+}
+
+.buttonPositioning{
+	width: 50%;
+}
+
+.align-landing-page{
+	margin-top: -8px;
+}
+}

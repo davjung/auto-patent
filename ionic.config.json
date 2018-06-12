@@ -1,0 +1,8 @@
+{
+  "name": "AutoPatent",
+  "app_id": "083190e8",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

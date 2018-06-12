@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Basic Info </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-label *ngIf="patent_info !== undefined && patent_info.not_in_database === true">
+      <ion-card-header>
+        <strong>  Patent isn't in database </strong>
+      </ion-card-header>
+    </ion-label>
+
+    <ion-card-header *ngIf="patent_info !== undefined && patent_info.not_in_database === false">
+      <strong>
+        Basic Info about your Patent:
+      </strong>
+    </ion-card-header>
+
+    <div class="positionInfo">
+      <ion-card-content>
+        <ion-label>
+          <strong> Application Number : </strong>
+            {{patent_info.application_number}}
+        </ion-label>
+
+        <ion-label> <strong> Patent Number: </strong> {{patent_info.patent_number}} </ion-label>
+
+        <ion-label> <strong> Estimated Expiration Date: </strong> {{patent_info.adjusted_patent_expiration}} </ion-label>
+
+        <ion-label class="positionDetailedInfoText">
+           If you want to see more detailed info, please pay here:
+        </ion-label>
+
+      <button class="payNow" ion-button block type="submit" (click)="seeMoreInfo()"> Pay Now </button>
+
+      </ion-card-content>
+    </div>
+
+  </ion-card>
+</ion-content>

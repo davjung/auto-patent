@@ -1,0 +1,8 @@
+    {
+        "name": "AutoPatent",
+        "description": "Calculate Expiration Dates",
+        "repository": "https://github.com/aki1508/AutoPatent.git",
+        "logo": "http://pereless360.com/img/SP/Ghost/360-logo-white.png",
+        "keywords": ["ionic2", "heroku", "pereless360"]
+    }
+   
