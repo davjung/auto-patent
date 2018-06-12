@@ -1,21 +1,21 @@
 webpackJsonp([5],{
 
-/***/ 165:
+/***/ 163:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatentDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basic_patent_detail_basic_patent_detail__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_pdfmake_build_pdfmake__ = __webpack_require__(829);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basic_patent_detail_basic_patent_detail__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_pdfmake_build_pdfmake__ = __webpack_require__(816);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_pdfmake_build_pdfmake___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_pdfmake_build_pdfmake__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_pdfmake_build_vfs_fonts__ = __webpack_require__(830);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_pdfmake_build_vfs_fonts__ = __webpack_require__(817);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_pdfmake_build_vfs_fonts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_pdfmake_build_vfs_fonts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_opener__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__ = __webpack_require__(448);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_opener__ = __webpack_require__(450);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -194,7 +194,7 @@ var PatentDetailsPage = (function () {
 PatentDetailsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-patent-details',template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/pages/patent-details/patent-details.html"*/'\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title> Detailed Patent Information </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n<ion-card>\n  <ion-card-content>\n  Disclaimer: Everything displayed on this site shall be regarded as general information and in no way should it be interpreted as legal advice. You should contact an attorney directly regarding your own situation. Note that an attorney-client relationship will only be established after we’ve established that there is no conflict of interest.\n  </ion-card-content>\n\n</ion-card>\n\n<div *ngIf="patent_info_display !== undefined">\n  <ion-card>\n    <ion-card-content>\n\n      <ion-row>\n        <ion-col col-6>\n           <strong> Patent Number: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info_display.patent_number}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Application Number </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.application_number}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n           <strong> Type of Patent: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info_display.patent_type}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> PCT Priority: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.pct_priority}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Filing Date of Patent: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.patent_filing}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Grant Date of Patent: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.patent_grant}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> To date, maintenance fees timely paid: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.maintenance_fees}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Does Patent Claim Any Domestic Benefit: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.domestic_benefit}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col offset-1 col-5>\n          <strong> If any domestic benefit, earliest effective filing date: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.domestic_benefit_eff_date}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Terminal Disclaimers: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.terminal_disclaimers}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col offset-1 col-5>\n          <strong> If any Terminal Disclaimers, earliest TD-based expiration date: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.terminal_disclaimers_td}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col offset-1 col-5>\n          <strong> If any Terminal Disclaimers, related patent number: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info_display.terminal_disclaimers_pt}} <button style="color:blue;" *ngIf = "TDcheck === true" (click)="tdPagePush()"> <ion-icon name="search"> </ion-icon> </button>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> How much 154 PTA is the patent entitled to (days): </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.pta_154}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> How much 156 PTE is the patent entitled to (days): </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.pte_156}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Original Expiration Date:  </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.og_expiration_date}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Adjusted Patent Expiration Date:  </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.adjusted_patent_expiration}}\n        </ion-col>\n      </ion-row>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-row>\n      <ion-col>\n        <button  ion-button block type="submit" (click)="returnHome()"> Return Home </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button full (click)="createPdf()">Create PDF</button>\n      </ion-col>\n  </ion-row>\n\n\n\n\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/pages/patent-details/patent-details.html"*/,
+        selector: 'page-patent-details',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/patent-details/patent-details.html"*/'\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title> Detailed Patent Information </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n<ion-card>\n  <ion-card-content>\n  Disclaimer: Everything displayed on this site shall be regarded as general information and in no way should it be interpreted as legal advice. You should contact an attorney directly regarding your own situation. Note that an attorney-client relationship will only be established after we’ve established that there is no conflict of interest.\n  </ion-card-content>\n\n</ion-card>\n\n<div *ngIf="patent_info_display !== undefined">\n  <ion-card>\n    <ion-card-content>\n\n      <ion-row>\n        <ion-col col-6>\n           <strong> Patent Number: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info_display.patent_number}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Application Number </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.application_number}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n           <strong> Type of Patent: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info_display.patent_type}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> PCT Priority: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.pct_priority}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Filing Date of Patent: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.patent_filing}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Grant Date of Patent: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.patent_grant}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> To date, maintenance fees timely paid: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.maintenance_fees}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Does Patent Claim Any Domestic Benefit: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.domestic_benefit}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col offset-1 col-5>\n          <strong> If any domestic benefit, earliest effective filing date: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.domestic_benefit_eff_date}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Terminal Disclaimers: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.terminal_disclaimers}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col offset-1 col-5>\n          <strong> If any Terminal Disclaimers, earliest TD-based expiration date: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.terminal_disclaimers_td}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col offset-1 col-5>\n          <strong> If any Terminal Disclaimers, related patent number: </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info_display.terminal_disclaimers_pt}} <button style="color:blue;" *ngIf = "TDcheck === true" (click)="tdPagePush()"> <ion-icon name="search"> </ion-icon> </button>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> How much 154 PTA is the patent entitled to (days): </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.pta_154}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> How much 156 PTE is the patent entitled to (days): </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.pte_156}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Original Expiration Date:  </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.og_expiration_date}}\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col col-6>\n          <strong> Adjusted Patent Expiration Date:  </strong>\n        </ion-col>\n        <ion-col col-2>\n          {{patent_info.adjusted_patent_expiration}}\n        </ion-col>\n      </ion-row>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <ion-row>\n      <ion-col>\n        <button  ion-button block type="submit" (click)="returnHome()"> Return Home </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button full (click)="createPdf()">Create PDF</button>\n      </ion-col>\n  </ion-row>\n\n\n\n\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/patent-details/patent-details.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_patent_service__["a" /* PatentService */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
@@ -209,7 +209,7 @@ PatentDetailsPage = __decorate([
 
 /***/ }),
 
-/***/ 178:
+/***/ 176:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -222,32 +222,32 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 178;
+webpackEmptyAsyncContext.id = 176;
 
 /***/ }),
 
-/***/ 223:
+/***/ 221:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/basic-patent-detail/basic-patent-detail.module": [
-		857,
+		840,
 		4
 	],
 	"../pages/login/login.module": [
-		860,
+		843,
 		1
 	],
 	"../pages/past-patent-searches/past-patent-searches.module": [
-		859,
+		842,
 		3
 	],
 	"../pages/patent-details/patent-details.module": [
-		858,
+		841,
 		2
 	],
 	"../pages/reset-password/reset-password.module": [
-		861,
+		844,
 		0
 	]
 };
@@ -262,19 +262,19 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 223;
+webpackAsyncContext.id = 221;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 228:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__patent_details_patent_details__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__patent_details_patent_details__ = __webpack_require__(163);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -315,7 +315,7 @@ var PaymentPage = (function () {
 }());
 PaymentPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-list',template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/pages/payment/payment.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Payment</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h3 style="padding-left:45px;">\n    Payment Methods\n  </h3>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon name="{{item.icon}}" item-left></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-right>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <a style="padding-left:45px;">\n    Add a payment method\n  </a>\n\n  <ion-row>\n    <ion-col offset-4 col-4>\n     <button  ion-button block type="submit" (click)="confirm()"> Confirm </button>\n    </ion-col>\n</ion-row>\n\n    \n</ion-content>\n\n\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/pages/payment/payment.html"*/
+        selector: 'page-list',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/payment/payment.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Payment</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h3 style="padding-left:45px;">\n    Payment Methods\n  </h3>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon name="{{item.icon}}" item-left></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-right>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n  <a style="padding-left:45px;">\n    Add a payment method\n  </a>\n\n  <ion-row>\n    <ion-col offset-4 col-4>\n     <button  ion-button block type="submit" (click)="confirm()"> Confirm </button>\n    </ion-col>\n</ion-row>\n\n    \n</ion-content>\n\n\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/payment/payment.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
@@ -325,17 +325,17 @@ PaymentPage = __decorate([
 
 /***/ }),
 
-/***/ 229:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalculationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_patent_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__basic_patent_detail_basic_patent_detail__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database_deprecated__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_patent_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__basic_patent_detail_basic_patent_detail__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database_deprecated__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -353,8 +353,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-// import { FirebaseListObservable } from 'angularfire2/database-deprecated';
-// import firebase from 'firebase/app';
 
 var CalculationsPage = (function () {
     function CalculationsPage(navCtrl, navParams, formBuilder, patentService, db, patserv) {
@@ -364,7 +362,6 @@ var CalculationsPage = (function () {
         this.db = db;
         this.patserv = patserv;
         this.pt = {
-            key: '',
             application_number: '',
             patent_type: '',
             patent_filing: '',
@@ -542,7 +539,7 @@ var CalculationsPage = (function () {
 }());
 CalculationsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-calculations',template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/pages/calculations/calculations.html"*/'<!--\n  Generated template for the CalculationsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <ion-title>Calculations</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-header>\n      <strong>\n        Your patent was not found in our database. To manually calculate your expiration date, please fill out the form below.\n      </strong>\n    </ion-card-header>\n\n    <div class="positionInfo">\n      <ion-card-content>\n        <form [formGroup]="patentCalcForm" (submit)="calcPatent(pt)" novalidate>\n\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="appnumber" type="string" placeholder="Application Number" [(ngModel)]="pt.application_number">\n                </ion-input>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="patentnumber" type="patentnumber" placeholder="Patent Number" [(ngModel)]="pt.patent_number">\n                </ion-input>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-datetime formControlName="filing" placeholder="Filing Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.patent_filing"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-datetime formControlName="grant" placeholder="Grant Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.patent_grant"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              Type of Patent:\n            </ion-col>\n            <ion-col>\n              <ion-segment formControlName="patenttype" [(ngModel)]="pt.patent_type">\n                <ion-segment-button value="Utility">\n                  Utility\n                </ion-segment-button>\n                <ion-segment-button value="Plant">\n                  Plant\n                </ion-segment-button>\n                <ion-segment-button value="Design">\n                  Design\n                </ion-segment-button>\n              </ion-segment>\n            </ion-col>\n          </ion-row>\n\n          <!-- only if utility patent -->\n          <!-- we want date of expiration, change to paid each fee -->\n          <ion-row>\n            <ion-col>\n              All maintenance fees paid within 6 months after deadline?\n            </ion-col>\n            <ion-col>\n              <ion-segment formControlName="mainfees" [(ngModel)]="pt.maintenance_fees">\n                <ion-segment-button value="Yes">\n                  Yes\n                </ion-segment-button>\n                <ion-segment-button value="No">\n                  No\n                </ion-segment-button>\n              </ion-segment>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              Terminal Disclaimer?\n            </ion-col>\n            <ion-col>\n              <ion-segment formControlName="td" [(ngModel)]="pt.terminal_disclaimers">\n                <ion-segment-button value="Yes">\n                  Yes\n                </ion-segment-button>\n                <ion-segment-button value="No">\n                  No\n                </ion-segment-button>\n              </ion-segment>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              If yes, earliest TD based expiration date? (Parent/assigned expiration date)\n            </ion-col>\n            <ion-col col-5>\n              <ion-item>\n                <ion-datetime formControlName="td_ed" placeholder="Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.terminal_disclaimers_td"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              If yes, related parent patent number?\n            </ion-col>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="td_pn" type="patentnumber" placeholder="Parent patent number" [(ngModel)]="pt.terminal_disclaimers_pt"></ion-input>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n\n          <!-- change so that you can choose one or both or neither -->\n\n          <!-- show only if filing date >= may 29 2000 -->\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="pta" type="number" placeholder="PTA days, if applicable" [(ngModel)]="pt.pta_154">\n                </ion-input>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="pte" type="number" placeholder="PTE days, if applicable" [(ngModel)]="pt.pte_156">\n                </ion-input>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              Does patent claim any domestic benefit?\n            </ion-col>\n            <ion-col>\n              <ion-segment formControlName="domben" [(ngModel)]="pt.domestic_benefit">\n                <ion-segment-button value="Yes">\n                  Yes\n                </ion-segment-button>\n                <ion-segment-button value="No">\n                  No\n                </ion-segment-button>\n              </ion-segment>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              If yes, what is the earliest effective filing date?\n            </ion-col>\n            <ion-col col-5>\n              <ion-item>\n                <ion-datetime formControlName="db_eefd" placeholder="EEFD" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.domestic_benefit_eff_date"></ion-datetime>\n              </ion-item>\n            </ion-col>\n          </ion-row>\n\n\n\n          <button ion-button icon-only type="submit" class="submit" outline>\n            <ion-icon name="search"></ion-icon>\n          </button>\n        </form>\n\n        <!-- {{pt | json}} -->\n\n        <ion-label> <strong> Estimated Expiration Date: </strong>\n          {{patent_info.adjusted_patent_expiration}}\n        </ion-label>\n\n        <ion-label class="positionDetailedInfoText">\n           If you want to see more detailed info, please pay here:\n        </ion-label>\n\n        <!-- <button class="payNow" *ngIf="patent_info !== undefined && patent_info.not_in_database === false" ion-button block type="submit" (click)="seeMoreInfo()"> Pay Now </button> -->\n\n      </ion-card-content>\n    </div>\n\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/pages/calculations/calculations.html"*/,
+        selector: 'page-calculations',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/calculations/calculations.html"*/'<!--\n  Generated template for the CalculationsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n\n  <ion-navbar color="primary">\n    <ion-title>Calculations</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-card>\n    <ion-card-header>\n      <strong>\n        * Your patent was not found in our database. To manually calculate your expiration date, please fill out the form below.\n      </strong>\n    </ion-card-header>\n  </ion-card>\n\n\n    <div class="positionInfo">\n      <ion-card>\n      <ion-card-content>\n        <form [formGroup]="patentCalcForm" (submit)="calcPatent()" novalidate>\n\n          <ion-row>\n            <ion-col>\n              Application Number:\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item >\n                <ion-label stacked> Application Number </ion-label>\n                <ion-input formControlName="appnumber" type="string" placeholder="Your Application Number">\n                </ion-input>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n            <ion-col>\n              Patent Number:\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-label stacked> Patent Number </ion-label>\n                <ion-input formControlName="patentnumber" type="number" placeholder="Your Patent Number">\n                </ion-input>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n            <ion-col>\n              Filing Date:\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-label stacked> Filing Date </ion-label>\n                <ion-datetime formControlName="filing" placeholder="Month Date, Year" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31"></ion-datetime>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n\n            <ion-col>\n              Grant Date:\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-label stacked> Grant Date </ion-label>\n                <ion-datetime formControlName="grant" placeholder="Month Date, Year" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" ></ion-datetime>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              Type of Patent:\n            </ion-col>\n            <ion-col>\n              <ion-card>\n              <ion-segment formControlName="patenttype">\n                <ion-segment-button value="Utility">\n                  Utility\n                </ion-segment-button>\n                <ion-segment-button value="Plant">\n                  Plant\n                </ion-segment-button>\n                <ion-segment-button value="Design">\n                  Design\n                </ion-segment-button>\n              </ion-segment>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <!-- only if utility patent -->\n          <!-- we want date of expiration, change to paid each fee -->\n          <ion-row>\n            <ion-col>\n              All maintenance fees paid within 6 months after deadline?\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-segment formControlName="mainfees">\n                <ion-segment-button value="Yes">\n                  Yes\n                </ion-segment-button>\n                <ion-segment-button value="No">\n                  No\n                </ion-segment-button>\n              </ion-segment>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n<ion-row>\n</ion-row>\n\n          <ion-row>\n            <ion-col>\n\n              Terminal Disclaimer?\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-segment formControlName="td">\n                <ion-segment-button value="Yes">\n                  Yes\n                </ion-segment-button>\n                <ion-segment-button value="No">\n                  No\n                </ion-segment-button>\n              </ion-segment>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <!-- only if td -->\n          <!-- <ion-row>\n            <ion-col>\n              Type of Terminal Disclaimer:\n            </ion-col>\n            <ion-col>\n              <ion-segment formControlName="tdtype">\n                <ion-segment-button value="full">\n                  Full Statutory Term\n                </ion-segment-button>\n                <ion-segment-button value="date">\n                  Date\n                </ion-segment-button>\n                <ion-segment-button value="termdate">\n                  Term & Date\n                </ion-segment-button>\n              </ion-segment>\n            </ion-col>\n          </ion-row> -->\n          <ion-card margin-left>\n          <ion-row>\n            <ion-col padding-left>\n              IF YES to Terminal Disclaimer, earliest TD based expiration date? (Parent/Assigned Expiration Date)\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-label stacked> Parent/Assigned Expiration Date </ion-label>\n                <ion-datetime formControlName="td_ed" placeholder="Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31"></ion-datetime>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col padding-left >\n              IF YES to Terminal Disclaimer, related parent patent number?\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-label stacked> Parent Patent Number </ion-label>\n                <ion-input formControlName="td_pn" type="patentnumber" placeholder="Parent patent number"></ion-input>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n        </ion-card>\n\n\n\n          <!-- change so that you can choose one or both or neither -->\n\n          <!-- show only if filing date >= may 29 2000 -->\n          <ion-row>\n            <ion-col>\n\n                Does your patent have a Patent Term Adjustment?\n\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n\n                <ion-label stacked> PTA days, if applicable </ion-label>\n                <ion-input formControlName="pta" type="number" placeholder="Days">\n                </ion-input>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              Does your patent have a Patent Term Extension?\n\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-label stacked> PTE days, if applicable </ion-label>\n                <ion-input formControlName="pte" type="number" placeholder="Days">\n                </ion-input>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              Does patent claim any domestic benefit?\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-segment formControlName="domben">\n                <ion-segment-button value="Yes">\n                  Yes\n                </ion-segment-button>\n                <ion-segment-button value="No">\n                  No\n                </ion-segment-button>\n              </ion-segment>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n          <ion-row>\n            <ion-col>\n              If yes, what is the earliest effective filing date?\n            </ion-col>\n            <ion-col col-3>\n              <ion-card>\n              <ion-item>\n                <ion-datetime formControlName="db_eefd" placeholder="EEFD" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31"></ion-datetime>\n              </ion-item>\n            </ion-card>\n            </ion-col>\n          </ion-row>\n\n\n\n          <button ion-button icon-only type="submit" class="submit" outline>\n            <ion-icon name="search"></ion-icon>\n          </button>\n        </form>\n\n        <ion-label> <strong> Estimated Expiration Date: </strong>\n          {{patent_info.adjusted_patent_expiration}}\n        </ion-label>\n\n        <ion-label class="positionDetailedInfoText">\n           If you want to see more detailed info, please pay here:\n        </ion-label>\n\n        <!-- <button class="payNow" *ngIf="patent_info !== undefined && patent_info.not_in_database === false" ion-button block type="submit" (click)="seeMoreInfo()"> Pay Now </button> -->\n\n      </ion-card-content>\n    </ion-card>\n    </div>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/calculations/calculations.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__providers_patent_service__["a" /* PatentService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_patent_service__["a" /* PatentService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_patent_service__["a" /* PatentService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_angularfire2_database_deprecated__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angularfire2_database_deprecated__["a" /* AngularFireDatabase */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__providers_patent_service__["a" /* PatentService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_patent_service__["a" /* PatentService */]) === "function" && _f || Object])
@@ -553,194 +550,19 @@ var _a, _b, _c, _d, _e, _f;
 
 /***/ }),
 
-/***/ 502:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PastPatentSearchesPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__ = __webpack_require__(60);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-/**
- * Generated class for the PastPatentSearchesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var PastPatentSearchesPage = (function () {
-    function PastPatentSearchesPage() {
-    }
-    return PastPatentSearchesPage;
-}());
-PastPatentSearchesPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-past-patent-searches',template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/pages/past-patent-searches/past-patent-searches.html"*/'<!--\n  Generated template for the PastPatentSearchesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>View Your Past Searches </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/pages/past-patent-searches/past-patent-searches.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_2__providers_patent_service__["a" /* PatentService */]]
-    })
-], PastPatentSearchesPage);
-
-//# sourceMappingURL=past-patent-searches.js.map
-
-/***/ }),
-
-/***/ 503:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(504);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(508);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 508:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(851);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_patent_details_patent_details__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_payment_payment__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_auth_auth__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_basic_patent_detail_basic_patent_detail__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_past_patent_searches_past_patent_searches__ = __webpack_require__(502);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_calculations_calculations__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_file__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_file_opener__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_patent_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__firebase_credentials__ = __webpack_require__(852);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angularfire2_database_deprecated__ = __webpack_require__(495);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = (function () {
-    function AppModule() {
-    }
-    return AppModule;
-}());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_patent_details_patent_details__["a" /* PatentDetailsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_basic_patent_detail_basic_patent_detail__["a" /* BasicPatentDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_payment_payment__["a" /* PaymentPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_past_patent_searches_past_patent_searches__["a" /* PastPatentSearchesPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_calculations_calculations__["a" /* CalculationsPage */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
-                links: [
-                    { loadChildren: '../pages/basic-patent-detail/basic-patent-detail.module#BasicPatentDetailPageModule', name: 'BasicPatentDetailPage', segment: 'basic-patent-detail', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/patent-details/patent-details.module#PatentDetailsPageModule', name: 'PatentDetailsPage', segment: 'patent-details', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/past-patent-searches/past-patent-searches.module#PastPatentSearchesPageModule', name: 'PastPatentSearchesPage', segment: 'past-patent-searches', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/reset-password/reset-password.module#ResetPasswordPageModule', name: 'ResetPasswordPage', segment: 'reset-password', priority: 'low', defaultHistory: [] }
-                ]
-            }),
-            __WEBPACK_IMPORTED_MODULE_16_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_17__firebase_credentials__["a" /* FIREBASE_CREDENTIALS */]),
-            __WEBPACK_IMPORTED_MODULE_18_angularfire2_database_deprecated__["b" /* AngularFireDatabaseModule */]
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_patent_details_patent_details__["a" /* PatentDetailsPage */],
-            __WEBPACK_IMPORTED_MODULE_10__pages_basic_patent_detail_basic_patent_detail__["a" /* BasicPatentDetailPage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_payment_payment__["a" /* PaymentPage */],
-            __WEBPACK_IMPORTED_MODULE_11__pages_past_patent_searches_past_patent_searches__["a" /* PastPatentSearchesPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_calculations_calculations__["a" /* CalculationsPage */]
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_9__providers_auth_auth__["a" /* AuthProvider */],
-            __WEBPACK_IMPORTED_MODULE_13__ionic_native_file__["a" /* File */],
-            __WEBPACK_IMPORTED_MODULE_14__ionic_native_file_opener__["a" /* FileOpener */],
-            // FirebaseProvider
-            __WEBPACK_IMPORTED_MODULE_15__providers_patent_service__["a" /* PatentService */]
-        ]
-    })
-], AppModule);
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 536:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Patent; });
-var Patent = (function () {
-    function Patent() {
-    }
-    return Patent;
-}());
-
-//# sourceMappingURL=patent.js.map
-
-/***/ }),
-
-/***/ 60:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PatentService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_patent__ = __webpack_require__(536);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_auth__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database_deprecated__ = __webpack_require__(495);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_patent__ = __webpack_require__(526);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_auth__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2_database_deprecated__ = __webpack_require__(126);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -798,7 +620,23 @@ var PatentService = (function () {
         this.patentRef = __WEBPACK_IMPORTED_MODULE_2_firebase__["database"]().ref().child('patents2');
     }
     PatentService.prototype.addPatent = function (pt) {
-        this.patentRef.child(pt.patent_number).set(pt);
+        this.patentRef.child(pt.patent_number).child("Application Number").set(pt.application_number);
+        this.patentRef.child(pt.patent_number).child("Patent Number").set(pt.patent_number);
+        this.patentRef.child(pt.patent_number).child("Patent Type").set(pt.patent_type);
+        this.patentRef.child(pt.patent_number).child("Patent Filing Date").set(pt.patent_filing);
+        this.patentRef.child(pt.patent_number).child("Patent Grant Date").set(pt.patent_grant);
+        this.patentRef.child(pt.patent_number).child("Maintenance Fees").set(pt.maintenance_fees);
+        this.patentRef.child(pt.patent_number).child("PCT Priority").set(pt.pct_priority);
+        this.patentRef.child(pt.patent_number).child("Domestic Benefit").set(pt.domestic_benefit);
+        this.patentRef.child(pt.patent_number).child("Domestic Benefit Effective Date").set(pt.domestic_benefit_eff_date);
+        this.patentRef.child(pt.patent_number).child("Terminal Disclaimer").set(pt.terminal_disclaimers);
+        this.patentRef.child(pt.patent_number).child("Terminal Disclaimer Earliest TD Date").set(pt.terminal_disclaimers_td);
+        this.patentRef.child(pt.patent_number).child("Terminal Disclaimer Related PN").set(pt.terminal_disclaimers_pt);
+        this.patentRef.child(pt.patent_number).child("PTA 154").set(pt.pta_154);
+        this.patentRef.child(pt.patent_number).child("PTE 156").set(pt.pte_156);
+        this.patentRef.child(pt.patent_number).child("Original Expiration Date").set(pt.og_expiration_date);
+        this.patentRef.child(pt.patent_number).child("Adjustment Days").set(pt.adjustment_days);
+        this.patentRef.child(pt.patent_number).child("Adjusted Expiration Date").set(pt.adjusted_patent_expiration);
     };
     PatentService.prototype.getApplicationInfo = function (num) {
         return this.patentRef.orderByChild('Application Number').equalTo(num).once("value").then(function (snapshot) {
@@ -886,15 +724,190 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 70:
+/***/ 492:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PastPatentSearchesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__ = __webpack_require__(47);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+/**
+ * Generated class for the PastPatentSearchesPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PastPatentSearchesPage = (function () {
+    function PastPatentSearchesPage() {
+    }
+    return PastPatentSearchesPage;
+}());
+PastPatentSearchesPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        selector: 'page-past-patent-searches',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/past-patent-searches/past-patent-searches.html"*/'<!--\n  Generated template for the PastPatentSearchesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>View Your Past Searches </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/past-patent-searches/past-patent-searches.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_2__providers_patent_service__["a" /* PatentService */]]
+    })
+], PastPatentSearchesPage);
+
+//# sourceMappingURL=past-patent-searches.js.map
+
+/***/ }),
+
+/***/ 493:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(494);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(498);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 498:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(490);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(838);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_patent_details_patent_details__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_payment_payment__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_auth_auth__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_basic_patent_detail_basic_patent_detail__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_past_patent_searches_past_patent_searches__ = __webpack_require__(492);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_calculations_calculations__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_file__ = __webpack_require__(448);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_file_opener__ = __webpack_require__(450);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_patent_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__firebase_credentials__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angularfire2_database_deprecated__ = __webpack_require__(126);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_6__pages_patent_details_patent_details__["a" /* PatentDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_basic_patent_detail_basic_patent_detail__["a" /* BasicPatentDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_payment_payment__["a" /* PaymentPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_past_patent_searches_past_patent_searches__["a" /* PastPatentSearchesPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_calculations_calculations__["a" /* CalculationsPage */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                links: [
+                    { loadChildren: '../pages/basic-patent-detail/basic-patent-detail.module#BasicPatentDetailPageModule', name: 'BasicPatentDetailPage', segment: 'basic-patent-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/patent-details/patent-details.module#PatentDetailsPageModule', name: 'PatentDetailsPage', segment: 'patent-details', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/past-patent-searches/past-patent-searches.module#PastPatentSearchesPageModule', name: 'PastPatentSearchesPage', segment: 'past-patent-searches', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/reset-password/reset-password.module#ResetPasswordPageModule', name: 'ResetPasswordPage', segment: 'reset-password', priority: 'low', defaultHistory: [] }
+                ]
+            }),
+            __WEBPACK_IMPORTED_MODULE_16_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_17__firebase_credentials__["a" /* FIREBASE_CREDENTIALS */]),
+            __WEBPACK_IMPORTED_MODULE_18_angularfire2_database_deprecated__["b" /* AngularFireDatabaseModule */]
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_6__pages_patent_details_patent_details__["a" /* PatentDetailsPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_basic_patent_detail_basic_patent_detail__["a" /* BasicPatentDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_payment_payment__["a" /* PaymentPage */],
+            __WEBPACK_IMPORTED_MODULE_11__pages_past_patent_searches_past_patent_searches__["a" /* PastPatentSearchesPage */],
+            __WEBPACK_IMPORTED_MODULE_12__pages_calculations_calculations__["a" /* CalculationsPage */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+            __WEBPACK_IMPORTED_MODULE_9__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__ionic_native_file__["a" /* File */],
+            __WEBPACK_IMPORTED_MODULE_14__ionic_native_file_opener__["a" /* FileOpener */],
+            // FirebaseProvider
+            __WEBPACK_IMPORTED_MODULE_15__providers_patent_service__["a" /* PatentService */]
+        ]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 526:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Patent; });
+var Patent = (function () {
+    function Patent() {
+    }
+    return Patent;
+}());
+
+//# sourceMappingURL=patent.js.map
+
+/***/ }),
+
+/***/ 66:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BasicPatentDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__payment_payment__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__payment_payment__ = __webpack_require__(323);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -969,7 +982,7 @@ var BasicPatentDetailPage = (function () {
 BasicPatentDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-basic-patent-detail',template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/pages/basic-patent-detail/basic-patent-detail.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Basic Info </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-label *ngIf="patent_info !== undefined && patent_info.not_in_database === true">\n      <ion-card-header>\n        <strong>  Patent isn\'t in database </strong>\n      </ion-card-header>\n    </ion-label>\n\n    <ion-card-header *ngIf="patent_info !== undefined && patent_info.not_in_database === false">\n      <strong>\n        Basic Info about your Patent:\n      </strong>\n    </ion-card-header>\n\n    <div class="positionInfo">\n      <ion-card-content>\n        <ion-label>\n          <strong> Application Number : </strong>\n            {{patent_info.application_number}}\n        </ion-label>\n\n        <ion-label> <strong> Patent Number: </strong> {{patent_info.patent_number}} </ion-label>\n\n        <ion-label> <strong> Estimated Expiration Date: </strong> {{patent_info.adjusted_patent_expiration}} </ion-label>\n\n        <ion-label class="positionDetailedInfoText">\n           If you want to see more detailed info, please pay here:\n        </ion-label>\n\n      <button class="payNow" ion-button block type="submit" (click)="seeMoreInfo()"> Pay Now </button>\n\n      </ion-card-content>\n    </div>\n\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/pages/basic-patent-detail/basic-patent-detail.html"*/,
+        selector: 'page-basic-patent-detail',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/basic-patent-detail/basic-patent-detail.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Basic Info </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-label *ngIf="patent_info !== undefined && patent_info.not_in_database === true">\n      <ion-card-header>\n        <strong>  Patent isn\'t in database </strong>\n      </ion-card-header>\n    </ion-label>\n\n    <ion-card-header *ngIf="patent_info !== undefined && patent_info.not_in_database === false">\n      <strong>\n        Basic Info about your Patent:\n      </strong>\n    </ion-card-header>\n\n    <div class="positionInfo">\n      <ion-card-content>\n        <ion-label>\n          <strong> Application Number : </strong>\n            {{patent_info.application_number}}\n        </ion-label>\n\n        <ion-label> <strong> Patent Number: </strong> {{patent_info.patent_number}} </ion-label>\n\n        <ion-label> <strong> Estimated Expiration Date: </strong> {{patent_info.adjusted_patent_expiration}} </ion-label>\n\n        <ion-label class="positionDetailedInfoText">\n           If you want to see more detailed info, please pay here:\n        </ion-label>\n\n      <button class="payNow" ion-button block type="submit" (click)="seeMoreInfo()"> Pay Now </button>\n\n      </ion-card-content>\n    </div>\n\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/basic-patent-detail/basic-patent-detail.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__providers_patent_service__["a" /* PatentService */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_patent_service__["a" /* PatentService */]])
@@ -979,256 +992,256 @@ BasicPatentDetailPage = __decorate([
 
 /***/ }),
 
-/***/ 828:
+/***/ 815:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 328,
-	"./af.js": 328,
-	"./ar": 329,
-	"./ar-dz": 330,
-	"./ar-dz.js": 330,
-	"./ar-kw": 331,
-	"./ar-kw.js": 331,
-	"./ar-ly": 332,
-	"./ar-ly.js": 332,
-	"./ar-ma": 333,
-	"./ar-ma.js": 333,
-	"./ar-sa": 334,
-	"./ar-sa.js": 334,
-	"./ar-tn": 335,
-	"./ar-tn.js": 335,
-	"./ar.js": 329,
-	"./az": 336,
-	"./az.js": 336,
-	"./be": 337,
-	"./be.js": 337,
-	"./bg": 338,
-	"./bg.js": 338,
-	"./bm": 339,
-	"./bm.js": 339,
-	"./bn": 340,
-	"./bn.js": 340,
-	"./bo": 341,
-	"./bo.js": 341,
-	"./br": 342,
-	"./br.js": 342,
-	"./bs": 343,
-	"./bs.js": 343,
-	"./ca": 344,
-	"./ca.js": 344,
-	"./cs": 345,
-	"./cs.js": 345,
-	"./cv": 346,
-	"./cv.js": 346,
-	"./cy": 347,
-	"./cy.js": 347,
-	"./da": 348,
-	"./da.js": 348,
-	"./de": 349,
-	"./de-at": 350,
-	"./de-at.js": 350,
-	"./de-ch": 351,
-	"./de-ch.js": 351,
-	"./de.js": 349,
-	"./dv": 352,
-	"./dv.js": 352,
-	"./el": 353,
-	"./el.js": 353,
-	"./en-au": 354,
-	"./en-au.js": 354,
-	"./en-ca": 355,
-	"./en-ca.js": 355,
-	"./en-gb": 356,
-	"./en-gb.js": 356,
-	"./en-ie": 357,
-	"./en-ie.js": 357,
-	"./en-il": 358,
-	"./en-il.js": 358,
-	"./en-nz": 359,
-	"./en-nz.js": 359,
-	"./eo": 360,
-	"./eo.js": 360,
-	"./es": 361,
-	"./es-do": 362,
-	"./es-do.js": 362,
-	"./es-us": 363,
-	"./es-us.js": 363,
-	"./es.js": 361,
-	"./et": 364,
-	"./et.js": 364,
-	"./eu": 365,
-	"./eu.js": 365,
-	"./fa": 366,
-	"./fa.js": 366,
-	"./fi": 367,
-	"./fi.js": 367,
-	"./fo": 368,
-	"./fo.js": 368,
-	"./fr": 369,
-	"./fr-ca": 370,
-	"./fr-ca.js": 370,
-	"./fr-ch": 371,
-	"./fr-ch.js": 371,
-	"./fr.js": 369,
-	"./fy": 372,
-	"./fy.js": 372,
-	"./gd": 373,
-	"./gd.js": 373,
-	"./gl": 374,
-	"./gl.js": 374,
-	"./gom-latn": 375,
-	"./gom-latn.js": 375,
-	"./gu": 376,
-	"./gu.js": 376,
-	"./he": 377,
-	"./he.js": 377,
-	"./hi": 378,
-	"./hi.js": 378,
-	"./hr": 379,
-	"./hr.js": 379,
-	"./hu": 380,
-	"./hu.js": 380,
-	"./hy-am": 381,
-	"./hy-am.js": 381,
-	"./id": 382,
-	"./id.js": 382,
-	"./is": 383,
-	"./is.js": 383,
-	"./it": 384,
-	"./it.js": 384,
-	"./ja": 385,
-	"./ja.js": 385,
-	"./jv": 386,
-	"./jv.js": 386,
-	"./ka": 387,
-	"./ka.js": 387,
-	"./kk": 388,
-	"./kk.js": 388,
-	"./km": 389,
-	"./km.js": 389,
-	"./kn": 390,
-	"./kn.js": 390,
-	"./ko": 391,
-	"./ko.js": 391,
-	"./ky": 392,
-	"./ky.js": 392,
-	"./lb": 393,
-	"./lb.js": 393,
-	"./lo": 394,
-	"./lo.js": 394,
-	"./lt": 395,
-	"./lt.js": 395,
-	"./lv": 396,
-	"./lv.js": 396,
-	"./me": 397,
-	"./me.js": 397,
-	"./mi": 398,
-	"./mi.js": 398,
-	"./mk": 399,
-	"./mk.js": 399,
-	"./ml": 400,
-	"./ml.js": 400,
-	"./mn": 401,
-	"./mn.js": 401,
-	"./mr": 402,
-	"./mr.js": 402,
-	"./ms": 403,
-	"./ms-my": 404,
-	"./ms-my.js": 404,
-	"./ms.js": 403,
-	"./mt": 405,
-	"./mt.js": 405,
-	"./my": 406,
-	"./my.js": 406,
-	"./nb": 407,
-	"./nb.js": 407,
-	"./ne": 408,
-	"./ne.js": 408,
-	"./nl": 409,
-	"./nl-be": 410,
-	"./nl-be.js": 410,
-	"./nl.js": 409,
-	"./nn": 411,
-	"./nn.js": 411,
-	"./pa-in": 412,
-	"./pa-in.js": 412,
-	"./pl": 413,
-	"./pl.js": 413,
-	"./pt": 414,
-	"./pt-br": 415,
-	"./pt-br.js": 415,
-	"./pt.js": 414,
-	"./ro": 416,
-	"./ro.js": 416,
-	"./ru": 417,
-	"./ru.js": 417,
-	"./sd": 418,
-	"./sd.js": 418,
-	"./se": 419,
-	"./se.js": 419,
-	"./si": 420,
-	"./si.js": 420,
-	"./sk": 421,
-	"./sk.js": 421,
-	"./sl": 422,
-	"./sl.js": 422,
-	"./sq": 423,
-	"./sq.js": 423,
-	"./sr": 424,
-	"./sr-cyrl": 425,
-	"./sr-cyrl.js": 425,
-	"./sr.js": 424,
-	"./ss": 426,
-	"./ss.js": 426,
-	"./sv": 427,
-	"./sv.js": 427,
-	"./sw": 428,
-	"./sw.js": 428,
-	"./ta": 429,
-	"./ta.js": 429,
-	"./te": 430,
-	"./te.js": 430,
-	"./tet": 431,
-	"./tet.js": 431,
-	"./tg": 432,
-	"./tg.js": 432,
-	"./th": 433,
-	"./th.js": 433,
-	"./tl-ph": 434,
-	"./tl-ph.js": 434,
-	"./tlh": 435,
-	"./tlh.js": 435,
-	"./tr": 436,
-	"./tr.js": 436,
-	"./tzl": 437,
-	"./tzl.js": 437,
-	"./tzm": 438,
-	"./tzm-latn": 439,
-	"./tzm-latn.js": 439,
-	"./tzm.js": 438,
-	"./ug-cn": 440,
-	"./ug-cn.js": 440,
-	"./uk": 441,
-	"./uk.js": 441,
-	"./ur": 442,
-	"./ur.js": 442,
-	"./uz": 443,
-	"./uz-latn": 444,
-	"./uz-latn.js": 444,
-	"./uz.js": 443,
-	"./vi": 445,
-	"./vi.js": 445,
-	"./x-pseudo": 446,
-	"./x-pseudo.js": 446,
-	"./yo": 447,
-	"./yo.js": 447,
-	"./zh-cn": 448,
-	"./zh-cn.js": 448,
-	"./zh-hk": 449,
-	"./zh-hk.js": 449,
-	"./zh-tw": 450,
-	"./zh-tw.js": 450
+	"./af": 325,
+	"./af.js": 325,
+	"./ar": 326,
+	"./ar-dz": 327,
+	"./ar-dz.js": 327,
+	"./ar-kw": 328,
+	"./ar-kw.js": 328,
+	"./ar-ly": 329,
+	"./ar-ly.js": 329,
+	"./ar-ma": 330,
+	"./ar-ma.js": 330,
+	"./ar-sa": 331,
+	"./ar-sa.js": 331,
+	"./ar-tn": 332,
+	"./ar-tn.js": 332,
+	"./ar.js": 326,
+	"./az": 333,
+	"./az.js": 333,
+	"./be": 334,
+	"./be.js": 334,
+	"./bg": 335,
+	"./bg.js": 335,
+	"./bm": 336,
+	"./bm.js": 336,
+	"./bn": 337,
+	"./bn.js": 337,
+	"./bo": 338,
+	"./bo.js": 338,
+	"./br": 339,
+	"./br.js": 339,
+	"./bs": 340,
+	"./bs.js": 340,
+	"./ca": 341,
+	"./ca.js": 341,
+	"./cs": 342,
+	"./cs.js": 342,
+	"./cv": 343,
+	"./cv.js": 343,
+	"./cy": 344,
+	"./cy.js": 344,
+	"./da": 345,
+	"./da.js": 345,
+	"./de": 346,
+	"./de-at": 347,
+	"./de-at.js": 347,
+	"./de-ch": 348,
+	"./de-ch.js": 348,
+	"./de.js": 346,
+	"./dv": 349,
+	"./dv.js": 349,
+	"./el": 350,
+	"./el.js": 350,
+	"./en-au": 351,
+	"./en-au.js": 351,
+	"./en-ca": 352,
+	"./en-ca.js": 352,
+	"./en-gb": 353,
+	"./en-gb.js": 353,
+	"./en-ie": 354,
+	"./en-ie.js": 354,
+	"./en-il": 355,
+	"./en-il.js": 355,
+	"./en-nz": 356,
+	"./en-nz.js": 356,
+	"./eo": 357,
+	"./eo.js": 357,
+	"./es": 358,
+	"./es-do": 359,
+	"./es-do.js": 359,
+	"./es-us": 360,
+	"./es-us.js": 360,
+	"./es.js": 358,
+	"./et": 361,
+	"./et.js": 361,
+	"./eu": 362,
+	"./eu.js": 362,
+	"./fa": 363,
+	"./fa.js": 363,
+	"./fi": 364,
+	"./fi.js": 364,
+	"./fo": 365,
+	"./fo.js": 365,
+	"./fr": 366,
+	"./fr-ca": 367,
+	"./fr-ca.js": 367,
+	"./fr-ch": 368,
+	"./fr-ch.js": 368,
+	"./fr.js": 366,
+	"./fy": 369,
+	"./fy.js": 369,
+	"./gd": 370,
+	"./gd.js": 370,
+	"./gl": 371,
+	"./gl.js": 371,
+	"./gom-latn": 372,
+	"./gom-latn.js": 372,
+	"./gu": 373,
+	"./gu.js": 373,
+	"./he": 374,
+	"./he.js": 374,
+	"./hi": 375,
+	"./hi.js": 375,
+	"./hr": 376,
+	"./hr.js": 376,
+	"./hu": 377,
+	"./hu.js": 377,
+	"./hy-am": 378,
+	"./hy-am.js": 378,
+	"./id": 379,
+	"./id.js": 379,
+	"./is": 380,
+	"./is.js": 380,
+	"./it": 381,
+	"./it.js": 381,
+	"./ja": 382,
+	"./ja.js": 382,
+	"./jv": 383,
+	"./jv.js": 383,
+	"./ka": 384,
+	"./ka.js": 384,
+	"./kk": 385,
+	"./kk.js": 385,
+	"./km": 386,
+	"./km.js": 386,
+	"./kn": 387,
+	"./kn.js": 387,
+	"./ko": 388,
+	"./ko.js": 388,
+	"./ky": 389,
+	"./ky.js": 389,
+	"./lb": 390,
+	"./lb.js": 390,
+	"./lo": 391,
+	"./lo.js": 391,
+	"./lt": 392,
+	"./lt.js": 392,
+	"./lv": 393,
+	"./lv.js": 393,
+	"./me": 394,
+	"./me.js": 394,
+	"./mi": 395,
+	"./mi.js": 395,
+	"./mk": 396,
+	"./mk.js": 396,
+	"./ml": 397,
+	"./ml.js": 397,
+	"./mn": 398,
+	"./mn.js": 398,
+	"./mr": 399,
+	"./mr.js": 399,
+	"./ms": 400,
+	"./ms-my": 401,
+	"./ms-my.js": 401,
+	"./ms.js": 400,
+	"./mt": 402,
+	"./mt.js": 402,
+	"./my": 403,
+	"./my.js": 403,
+	"./nb": 404,
+	"./nb.js": 404,
+	"./ne": 405,
+	"./ne.js": 405,
+	"./nl": 406,
+	"./nl-be": 407,
+	"./nl-be.js": 407,
+	"./nl.js": 406,
+	"./nn": 408,
+	"./nn.js": 408,
+	"./pa-in": 409,
+	"./pa-in.js": 409,
+	"./pl": 410,
+	"./pl.js": 410,
+	"./pt": 411,
+	"./pt-br": 412,
+	"./pt-br.js": 412,
+	"./pt.js": 411,
+	"./ro": 413,
+	"./ro.js": 413,
+	"./ru": 414,
+	"./ru.js": 414,
+	"./sd": 415,
+	"./sd.js": 415,
+	"./se": 416,
+	"./se.js": 416,
+	"./si": 417,
+	"./si.js": 417,
+	"./sk": 418,
+	"./sk.js": 418,
+	"./sl": 419,
+	"./sl.js": 419,
+	"./sq": 420,
+	"./sq.js": 420,
+	"./sr": 421,
+	"./sr-cyrl": 422,
+	"./sr-cyrl.js": 422,
+	"./sr.js": 421,
+	"./ss": 423,
+	"./ss.js": 423,
+	"./sv": 424,
+	"./sv.js": 424,
+	"./sw": 425,
+	"./sw.js": 425,
+	"./ta": 426,
+	"./ta.js": 426,
+	"./te": 427,
+	"./te.js": 427,
+	"./tet": 428,
+	"./tet.js": 428,
+	"./tg": 429,
+	"./tg.js": 429,
+	"./th": 430,
+	"./th.js": 430,
+	"./tl-ph": 431,
+	"./tl-ph.js": 431,
+	"./tlh": 432,
+	"./tlh.js": 432,
+	"./tr": 433,
+	"./tr.js": 433,
+	"./tzl": 434,
+	"./tzl.js": 434,
+	"./tzm": 435,
+	"./tzm-latn": 436,
+	"./tzm-latn.js": 436,
+	"./tzm.js": 435,
+	"./ug-cn": 437,
+	"./ug-cn.js": 437,
+	"./uk": 438,
+	"./uk.js": 438,
+	"./ur": 439,
+	"./ur.js": 439,
+	"./uz": 440,
+	"./uz-latn": 441,
+	"./uz-latn.js": 441,
+	"./uz.js": 440,
+	"./vi": 442,
+	"./vi.js": 442,
+	"./x-pseudo": 443,
+	"./x-pseudo.js": 443,
+	"./yo": 444,
+	"./yo.js": 444,
+	"./zh-cn": 445,
+	"./zh-cn.js": 445,
+	"./zh-hk": 446,
+	"./zh-hk.js": 446,
+	"./zh-tw": 447,
+	"./zh-tw.js": 447
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1244,22 +1257,22 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 828;
+webpackContext.id = 815;
 
 /***/ }),
 
-/***/ 851:
+/***/ 838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(494);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(493);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(490);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(93);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1318,7 +1331,7 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */])
 ], MyApp.prototype, "_NAV", void 0);
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/app/app.html"*/'\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/app/app.html"*/'\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -1327,7 +1340,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 852:
+/***/ 839:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1344,13 +1357,13 @@ var FIREBASE_CREDENTIALS = {
 
 /***/ }),
 
-/***/ 94:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1451,18 +1464,18 @@ AuthProvider = __decorate([
 
 /***/ }),
 
-/***/ 95:
+/***/ 93:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_auth__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_patent_service__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__basic_patent_detail_basic_patent_detail__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__calculations_calculations__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_patent_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__basic_patent_detail_basic_patent_detail__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__calculations_calculations__ = __webpack_require__(324);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1608,7 +1621,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/David/Desktop/AutoPatent/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>De<strong>TERMINATOR</strong> </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="logOut()">\n        <ion-icon name="log-out"> </ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card>\n      <ion-card-header text-center> <strong>\n        Welcome to DeTERMINATORs Patent Expiration Date Calculator!\n      </strong> </ion-card-header>\n    </ion-card>\n\n    <div class="positionCalculationCard">\n      <ion-card>\n        <ion-card-content>\n          To use our calculation software, please make sure your patent has been granted.\n        </ion-card-content>\n\n        <ion-list>\n          <ion-card-content> Choose the type of search: </ion-card-content>\n          <div class="positionCheckBox">\n            <ion-item>\n              <ion-label> Application Number </ion-label>\n              <ion-checkbox></ion-checkbox>\n            </ion-item>\n\n            <ion-item>\n              <ion-label> Patent Number </ion-label>\n              <ion-checkbox></ion-checkbox>\n            </ion-item>\n          </div>\n        </ion-list>\n\n        <form [formGroup]="patentForm" (submit)="getPatent()" novalidate>\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="patentnumber" type="patentnumber" placeholder="Input Patent/Application Number here">\n                </ion-input>\n              </ion-item>\n            </ion-col>\n\n            <ion-col>\n              <button ion-button icon-only type="submit" class="submit" outline>\n                <ion-icon name="search"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </form>\n\n        <ion-card-content>\n          If you would like to find out more about our calculation software, please check out our <a href="#" class="button button-outline button-positive align-landing-page" onclick="window.open(\'https://mariaweinmann2018.wixsite.com/determinator\', \'_system\', \'location=yes\');" > Home Page</a>\n        </ion-card-content>\n\n        <!-- <button ion-button type="submit" class="submit" outline (click)="pastSearches()">\n              Past Searches\n        </button> -->\n\n      </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/AutoPatent/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>De<strong>TERMINATOR</strong> </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="logOut()">\n        <ion-icon name="log-out"> </ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card>\n      <ion-card-header text-center> <strong>\n        Welcome to DeTERMINATORs Patent Expiration Date Calculator!\n      </strong> </ion-card-header>\n    </ion-card>\n\n    <div class="positionCalculationCard">\n      <ion-card>\n        <ion-card-content>\n          To use our calculation software, please make sure your patent has been granted.\n        </ion-card-content>\n\n        <ion-list>\n          <ion-card-content> Choose the type of search: </ion-card-content>\n          <div class="positionCheckBox">\n            <ion-item>\n              <ion-label> Application Number </ion-label>\n              <ion-checkbox></ion-checkbox>\n            </ion-item>\n\n            <ion-item>\n              <ion-label> Patent Number </ion-label>\n              <ion-checkbox></ion-checkbox>\n            </ion-item>\n          </div>\n        </ion-list>\n\n        <form [formGroup]="patentForm" (submit)="getPatent()" novalidate>\n          <ion-row>\n            <ion-col col-5>\n              <ion-item>\n                <ion-input formControlName="patentnumber" type="patentnumber" placeholder="Input Patent/Application Number here">\n                </ion-input>\n              </ion-item>\n            </ion-col>\n\n            <ion-col>\n              <button ion-button icon-only type="submit" class="submit" outline>\n                <ion-icon name="search"></ion-icon>\n              </button>\n            </ion-col>\n          </ion-row>\n        </form>\n\n        <ion-card-content>\n          If you would like to find out more about our calculation software, please check out our <a href="#" class="button button-outline button-positive align-landing-page" onclick="window.open(\'https://mariaweinmann2018.wixsite.com/determinator\', \'_system\', \'location=yes\');" > Home Page</a>\n        </ion-card-content>\n\n        <!-- <button ion-button type="submit" class="submit" outline (click)="pastSearches()">\n              Past Searches\n        </button> -->\n\n      </ion-card>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/home/home.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_4__providers_patent_service__["a" /* PatentService */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
@@ -1623,5 +1636,5 @@ HomePage = __decorate([
 
 /***/ })
 
-},[503]);
+},[493]);
 //# sourceMappingURL=main.js.map

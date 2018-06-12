@@ -13,7 +13,23 @@ export class PatentService {
   constructor(private authData: AuthProvider, private db: AngularFireDatabase) {}
 
   addPatent(pt: Patent) {
-    this.patentRef.child(pt.patent_number).set(pt);
+    this.patentRef.child(pt.patent_number).child("Application Number").set(pt.application_number);
+    this.patentRef.child(pt.patent_number).child("Patent Number").set(pt.patent_number);
+    this.patentRef.child(pt.patent_number).child("Patent Type").set(pt.patent_type);
+    this.patentRef.child(pt.patent_number).child("Patent Filing Date").set(pt.patent_filing);
+    this.patentRef.child(pt.patent_number).child("Patent Grant Date").set(pt.patent_grant);
+    this.patentRef.child(pt.patent_number).child("Maintenance Fees").set(pt.maintenance_fees);
+    this.patentRef.child(pt.patent_number).child("PCT Priority").set(pt.pct_priority);
+    this.patentRef.child(pt.patent_number).child("Domestic Benefit").set(pt.domestic_benefit);
+    this.patentRef.child(pt.patent_number).child("Domestic Benefit Effective Date").set(pt.domestic_benefit_eff_date);
+    this.patentRef.child(pt.patent_number).child("Terminal Disclaimer").set(pt.terminal_disclaimers);
+    this.patentRef.child(pt.patent_number).child("Terminal Disclaimer Earliest TD Date").set(pt.terminal_disclaimers_td);
+    this.patentRef.child(pt.patent_number).child("Terminal Disclaimer Related PN").set(pt.terminal_disclaimers_pt);
+    this.patentRef.child(pt.patent_number).child("PTA 154").set(pt.pta_154);
+    this.patentRef.child(pt.patent_number).child("PTE 156").set(pt.pte_156);
+    this.patentRef.child(pt.patent_number).child("Original Expiration Date").set(pt.og_expiration_date);
+    this.patentRef.child(pt.patent_number).child("Adjustment Days").set(pt.adjustment_days);
+    this.patentRef.child(pt.patent_number).child("Adjusted Expiration Date").set(pt.adjusted_patent_expiration);
   }
 
   getApplicationInfo(num){

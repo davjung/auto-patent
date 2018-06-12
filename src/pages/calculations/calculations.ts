@@ -8,9 +8,6 @@ import { HomePage } from '../home/home';
 import { BasicPatentDetailPage } from '../basic-patent-detail/basic-patent-detail';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database-deprecated';
 import { AngularFireList } from 'angularfire2/database';
-
-// import { FirebaseListObservable } from 'angularfire2/database-deprecated';
-// import firebase from 'firebase/app';
 import moment from 'moment';
 
 
@@ -25,7 +22,6 @@ export class CalculationsPage {
   patent_info: Patent;
 
   pt: Patent = {
-    key: '',
   	application_number: '',
   	patent_type: '',
   	patent_filing: '',
@@ -100,7 +96,7 @@ export class CalculationsPage {
     pt.not_in_database = false;
 
     this.patserv.addPatent(pt);
-    this.navCtrl.push(BasicPatentDetailPage, {patent: pt})
+    this.navCtrl.push(BasicPatentDetailPage, {patent: pt});
   }
 
   findOG(p) {

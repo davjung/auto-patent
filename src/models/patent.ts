@@ -1,5 +1,4 @@
 export class Patent {
-	key?: string;
 	application_number: string;
 	patent_type: string;
 	patent_filing: string;

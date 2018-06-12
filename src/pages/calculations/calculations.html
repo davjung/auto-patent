@@ -5,55 +5,82 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+
+
+  <ion-navbar color="primary">
     <ion-title>Calculations</ion-title>
   </ion-navbar>
+
 </ion-header>
 
 
 <ion-content padding>
+
   <ion-card>
     <ion-card-header>
       <strong>
-        Your patent was not found in our database. To manually calculate your expiration date, please fill out the form below.
+        * Your patent was not found in our database. To manually calculate your expiration date, please fill out the form below.
       </strong>
     </ion-card-header>
+  </ion-card>
+
 
     <div class="positionInfo">
+      <ion-card>
       <ion-card-content>
-        <form [formGroup]="patentCalcForm" (submit)="calcPatent(pt)" novalidate>
+        <form [formGroup]="patentCalcForm" (submit)="calcPatent()" novalidate>
 
           <ion-row>
-            <ion-col col-5>
-              <ion-item>
-                <ion-input formControlName="appnumber" type="string" placeholder="Application Number" [(ngModel)]="pt.application_number">
+            <ion-col>
+              Application Number:
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
+              <ion-item >
+                <ion-label stacked> Application Number </ion-label>
+                <ion-input formControlName="appnumber" type="string" placeholder="Your Application Number">
                 </ion-input>
               </ion-item>
+            </ion-card>
             </ion-col>
-          </ion-row>
-
-          <ion-row>
-            <ion-col col-5>
+            <ion-col>
+              Patent Number:
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
               <ion-item>
-                <ion-input formControlName="patentnumber" type="patentnumber" placeholder="Patent Number" [(ngModel)]="pt.patent_number">
+                <ion-label stacked> Patent Number </ion-label>
+                <ion-input formControlName="patentnumber" type="number" placeholder="Your Patent Number">
                 </ion-input>
               </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
 
-          <ion-row>
-            <ion-col col-5>
-              <ion-item>
-                <ion-datetime formControlName="filing" placeholder="Filing Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.patent_filing"></ion-datetime>
-              </ion-item>
-            </ion-col>
-          </ion-row>
 
           <ion-row>
-            <ion-col col-5>
+            <ion-col>
+              Filing Date:
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
               <ion-item>
-                <ion-datetime formControlName="grant" placeholder="Grant Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.patent_grant"></ion-datetime>
+                <ion-label stacked> Filing Date </ion-label>
+                <ion-datetime formControlName="filing" placeholder="Month Date, Year" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31"></ion-datetime>
               </ion-item>
+            </ion-card>
+            </ion-col>
+
+            <ion-col>
+              Grant Date:
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
+              <ion-item>
+                <ion-label stacked> Grant Date </ion-label>
+                <ion-datetime formControlName="grant" placeholder="Month Date, Year" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" ></ion-datetime>
+              </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
 
@@ -62,7 +89,8 @@
               Type of Patent:
             </ion-col>
             <ion-col>
-              <ion-segment formControlName="patenttype" [(ngModel)]="pt.patent_type">
+              <ion-card>
+              <ion-segment formControlName="patenttype">
                 <ion-segment-button value="Utility">
                   Utility
                 </ion-segment-button>
@@ -73,6 +101,7 @@
                   Design
                 </ion-segment-button>
               </ion-segment>
+            </ion-card>
             </ion-col>
           </ion-row>
 
@@ -82,8 +111,9 @@
             <ion-col>
               All maintenance fees paid within 6 months after deadline?
             </ion-col>
-            <ion-col>
-              <ion-segment formControlName="mainfees" [(ngModel)]="pt.maintenance_fees">
+            <ion-col col-3>
+              <ion-card>
+              <ion-segment formControlName="mainfees">
                 <ion-segment-button value="Yes">
                   Yes
                 </ion-segment-button>
@@ -91,15 +121,20 @@
                   No
                 </ion-segment-button>
               </ion-segment>
+            </ion-card>
             </ion-col>
           </ion-row>
+<ion-row>
+</ion-row>
 
           <ion-row>
             <ion-col>
+
               Terminal Disclaimer?
             </ion-col>
-            <ion-col>
-              <ion-segment formControlName="td" [(ngModel)]="pt.terminal_disclaimers">
+            <ion-col col-3>
+              <ion-card>
+              <ion-segment formControlName="td">
                 <ion-segment-button value="Yes">
                   Yes
                 </ion-segment-button>
@@ -107,50 +142,95 @@
                   No
                 </ion-segment-button>
               </ion-segment>
+            </ion-card>
+            </ion-col>
+          </ion-row>
+
+          <!-- only if td -->
+          <!-- <ion-row>
+            <ion-col>
+              Type of Terminal Disclaimer:
+            </ion-col>
+            <ion-col>
+              <ion-segment formControlName="tdtype">
+                <ion-segment-button value="full">
+                  Full Statutory Term
+                </ion-segment-button>
+                <ion-segment-button value="date">
+                  Date
+                </ion-segment-button>
+                <ion-segment-button value="termdate">
+                  Term & Date
+                </ion-segment-button>
+              </ion-segment>
+            </ion-col>
+          </ion-row> -->
+          <ion-card margin-left>
+          <ion-row>
+            <ion-col padding-left>
+              IF YES to Terminal Disclaimer, earliest TD based expiration date? (Parent/Assigned Expiration Date)
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
+              <ion-item>
+                <ion-label stacked> Parent/Assigned Expiration Date </ion-label>
+                <ion-datetime formControlName="td_ed" placeholder="Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31"></ion-datetime>
+              </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
 
           <ion-row>
-            <ion-col>
-              If yes, earliest TD based expiration date? (Parent/assigned expiration date)
+            <ion-col padding-left >
+              IF YES to Terminal Disclaimer, related parent patent number?
             </ion-col>
-            <ion-col col-5>
+            <ion-col col-3>
+              <ion-card>
               <ion-item>
-                <ion-datetime formControlName="td_ed" placeholder="Date" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.terminal_disclaimers_td"></ion-datetime>
+                <ion-label stacked> Parent Patent Number </ion-label>
+                <ion-input formControlName="td_pn" type="patentnumber" placeholder="Parent patent number"></ion-input>
               </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
+        </ion-card>
 
-          <ion-row>
-            <ion-col>
-              If yes, related parent patent number?
-            </ion-col>
-            <ion-col col-5>
-              <ion-item>
-                <ion-input formControlName="td_pn" type="patentnumber" placeholder="Parent patent number" [(ngModel)]="pt.terminal_disclaimers_pt"></ion-input>
-              </ion-item>
-            </ion-col>
-          </ion-row>
 
 
           <!-- change so that you can choose one or both or neither -->
 
           <!-- show only if filing date >= may 29 2000 -->
           <ion-row>
-            <ion-col col-5>
+            <ion-col>
+
+                Does your patent have a Patent Term Adjustment?
+
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
               <ion-item>
-                <ion-input formControlName="pta" type="number" placeholder="PTA days, if applicable" [(ngModel)]="pt.pta_154">
+
+                <ion-label stacked> PTA days, if applicable </ion-label>
+                <ion-input formControlName="pta" type="number" placeholder="Days">
                 </ion-input>
               </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
 
           <ion-row>
-            <ion-col col-5>
+            <ion-col>
+              Does your patent have a Patent Term Extension?
+
+            </ion-col>
+            <ion-col col-3>
+              <ion-card>
               <ion-item>
-                <ion-input formControlName="pte" type="number" placeholder="PTE days, if applicable" [(ngModel)]="pt.pte_156">
+                <ion-label stacked> PTE days, if applicable </ion-label>
+                <ion-input formControlName="pte" type="number" placeholder="Days">
                 </ion-input>
               </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
 
@@ -158,8 +238,9 @@
             <ion-col>
               Does patent claim any domestic benefit?
             </ion-col>
-            <ion-col>
-              <ion-segment formControlName="domben" [(ngModel)]="pt.domestic_benefit">
+            <ion-col col-3>
+              <ion-card>
+              <ion-segment formControlName="domben">
                 <ion-segment-button value="Yes">
                   Yes
                 </ion-segment-button>
@@ -167,6 +248,7 @@
                   No
                 </ion-segment-button>
               </ion-segment>
+            </ion-card>
             </ion-col>
           </ion-row>
 
@@ -174,10 +256,12 @@
             <ion-col>
               If yes, what is the earliest effective filing date?
             </ion-col>
-            <ion-col col-5>
+            <ion-col col-3>
+              <ion-card>
               <ion-item>
-                <ion-datetime formControlName="db_eefd" placeholder="EEFD" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31" [(ngModel)]="pt.domestic_benefit_eff_date"></ion-datetime>
+                <ion-datetime formControlName="db_eefd" placeholder="EEFD" displayFormat="MMM DD, YYYY" min="1940-01-01" max="2018-12-31"></ion-datetime>
               </ion-item>
+            </ion-card>
             </ion-col>
           </ion-row>
 
@@ -187,8 +271,6 @@
             <ion-icon name="search"></ion-icon>
           </button>
         </form>
-
-        <!-- {{pt | json}} -->
 
         <ion-label> <strong> Estimated Expiration Date: </strong>
           {{patent_info.adjusted_patent_expiration}}
@@ -201,8 +283,9 @@
         <!-- <button class="payNow" *ngIf="patent_info !== undefined && patent_info.not_in_database === false" ion-button block type="submit" (click)="seeMoreInfo()"> Pay Now </button> -->
 
       </ion-card-content>
+    </ion-card>
     </div>
 
-  </ion-card>
+
 
 </ion-content>

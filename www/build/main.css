@@ -28016,6 +28016,19 @@ page-basic-patent-detail .positionDetailedInfoText {
   margin-left: -20px;
 }
 
+page-calculations strong {
+  color: #FF0000;
+}
+
+page-calculations ion-card {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 70px;
+  width: auto;
+}
+
 page-home ion-card {
   border-top: 3px solid black;
   border-right: 3px solid black;
