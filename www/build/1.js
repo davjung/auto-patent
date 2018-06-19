@@ -124,11 +124,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 var LoginPage = (function () {
-    function LoginPage(navCtrl, loadingCtrl, alertCtrl, authProvider, formBuilder) {
+    function LoginPage(navCtrl, loadingCtrl, alertCtrl, authProvider, formBuilder, platform) {
         this.navCtrl = navCtrl;
         this.loadingCtrl = loadingCtrl;
         this.alertCtrl = alertCtrl;
         this.authProvider = authProvider;
+        this.platform = platform;
         this.loginForm = formBuilder.group({
             email: [
                 '',
@@ -140,6 +141,15 @@ var LoginPage = (function () {
             ]
         });
     }
+    LoginPage.prototype.showPlatform = function () {
+        var text = 'I run on: ' + this.platform.platforms();
+        var alert = this.alertCtrl.create({
+            title: 'My Home',
+            subTitle: text,
+            buttons: ['Ok']
+        });
+        alert.present();
+    };
     LoginPage.prototype.goToSignup = function () {
         this.navCtrl.push('SignupPage');
     };
@@ -192,13 +202,14 @@ var LoginPage = (function () {
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/login/login.html"*/'<ion-header>\n<!--   <ion-navbar color="primary">\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar> -->\n</ion-header>\n\n\n<ion-content padding>\n  <img src="assets/imgs/DeTerminatorLogo.png" style="height: 350px; width:auto; display: block; margin: auto">\n  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n\n    <ion-item>\n      <ion-label stacked>Email</ion-label>\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n    </ion-item>\n    <ion-item class="error-message" \n      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n      <p>Please enter a valid email.</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked>Password</ion-label>\n      <ion-input #password formControlName="password" type="password" placeholder="Your password" \n        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>\n    </ion-item>\n    <ion-item class="error-message" \n      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">\n      <p>Your password needs more than 6 characters.</p>\n    </ion-item>\n\n    <button ion-button block type="submit" margin-top="10px">\n      Login\n    </button>\n\n  </form>\n\n  <ion-row>\n    <ion-col offset-3 col-3>\n      <button ion-button block \n    (click)="goToSignup()">\n        Signup\n      </button>\n    </ion-col>\n    <ion-col col-3>\n      <button ion-button block\n      (click)="goToResetPassword()">\n        Forgot Password\n      </button>\n    </ion-col>\n  </ion-row>\n</ion-content>'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/login/login.html"*/
+        selector: 'page-login',template:/*ion-inline-start:"/Users/David/Desktop/auto-patent/src/pages/login/login.html"*/'<ion-header>\n<!--   <ion-navbar color="primary">\n    <ion-title>\n      Login\n    </ion-title>\n  </ion-navbar> -->\n</ion-header>\n\n\n<ion-content padding>\n  <img src="assets/imgs/DeTerminatorLogo.png" style="height: 350px; width:auto; display: block; margin: auto">\n  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>\n\n    <button ion-button full (click)="showPlatform()">Where am I running?</button>\n\n    <ion-item>\n      <ion-label stacked>Email</ion-label>\n      <ion-input #email formControlName="email" type="email" placeholder="Your email address" \n        [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>\n    </ion-item>\n    <ion-item class="error-message" \n      *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">\n      <p>Please enter a valid email.</p>\n    </ion-item>\n\n    <ion-item>\n      <ion-label stacked>Password</ion-label>\n      <ion-input #password formControlName="password" type="password" placeholder="Your password" \n        [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>\n    </ion-item>\n    <ion-item class="error-message" \n      *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">\n      <p>Your password needs more than 6 characters.</p>\n    </ion-item>\n\n    <button ion-button block type="submit" margin-top="10px">\n      Login\n    </button>\n\n  </form>\n\n  <ion-row>\n    <ion-col offset-3 col-3>\n      <button ion-button block \n    (click)="goToSignup()">\n        Signup\n      </button>\n    </ion-col>\n    <ion-col col-3>\n      <button ion-button block\n      (click)="goToResetPassword()">\n        Forgot Password\n      </button>\n    </ion-col>\n  </ion-row>\n</ion-content>'/*ion-inline-end:"/Users/David/Desktop/auto-patent/src/pages/login/login.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
-        __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
+        __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
 ], LoginPage);
 
 //# sourceMappingURL=login.js.map

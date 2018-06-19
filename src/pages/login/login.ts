@@ -5,7 +5,8 @@ import {
   IonicPage,
   Loading,
   LoadingController,
-  NavController
+  NavController,
+  Platform
 } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
@@ -25,7 +26,8 @@ export class LoginPage {
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
     public authProvider: AuthProvider,
-    formBuilder: FormBuilder
+    formBuilder: FormBuilder,
+    private platform: Platform
   ) {
     this.loginForm = formBuilder.group({
       email: [
@@ -37,6 +39,16 @@ export class LoginPage {
         Validators.compose([Validators.required, Validators.minLength(6)])
       ]
     });
+  }
+
+  showPlatform() {
+    let text = 'I run on: ' + this.platform.platforms();
+    let alert = this.alertCtrl.create({
+      title: 'My Home',
+      subTitle: text,
+      buttons: ['Ok']
+    });
+    alert.present();
   }
 
   goToSignup(): void {

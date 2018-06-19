@@ -11,6 +11,7 @@
   <img src="assets/imgs/DeTerminatorLogo.png" style="height: 350px; width:auto; display: block; margin: auto">
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
 
+    <button ion-button full (click)="showPlatform()">Where am I running?</button>
 
     <ion-item>
       <ion-label stacked>Email</ion-label>
